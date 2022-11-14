@@ -23,14 +23,16 @@ body {
 
   font-family: "League Spartan", sans-serif;
   min-height: 100vh;
-  display: grid;
+
+  /* display: grid;
   grid:
     "c1 h s1"
     "c2 m s2"
     "c3 m s3"
     "c4 m s4"
     "c5 f s5";
-  grid-template-columns: 5em 1fr 5em;
+  grid-template-columns: 5em 1fr 5em; */
+
   /* grid-template-rows: 45px 1fr 1fr 1fr; */ /*! Sjekk denne tilbake om grids blir føkka! */
 }
 
@@ -104,7 +106,6 @@ nav {
   list-style-type: none;
   width: 100%;
   z-index: 99;
-  /* border-bottom: 1px solid #d3d4cc; */
   background-color: #fffae5;
   opacity: 0.99;
   border-bottom: 2px solid #eecb52;
@@ -188,7 +189,7 @@ header section.divider {
   opacity: initial;
   padding: 100px;
   display: flex;
-  width: 100em;
+  width: 95em;
   position: absolute;
   z-index: 1;
   top: 649px;
@@ -219,6 +220,7 @@ main {
   text-align: center;
   justify-content: center;
   background-color: #fffae5;
+  margin-inline: 5em;
 }
 
 main h2 {
