@@ -107,7 +107,7 @@ nav {
   width: 100%;
   z-index: 99;
   background-color: #fffae5;
-  opacity: 0.99;
+  opacity: 0.9;
   border-bottom: 2px solid #eecb52;
 }
 
@@ -170,7 +170,7 @@ header article {
   /* border-radius: 8px; */
   /* background-color: #4b8f8c4b; */
   height: fit-content;
-  padding: 1em;
+  padding: 1em 0em 1em 1em;
   /* border: 2em #4b8f8c4b solid; */
   /* transition: 0.5s ease-in-out; */
 }
@@ -183,6 +183,50 @@ header p {
 header img {
   height: 35rem;
   z-index: 2;
+}
+
+header figure.img_wrap {
+  display: grid;
+  grid-template-columns: 1fr 4em 6em;
+  grid-template-rows: repeat(7, 5.5em);
+}
+
+.cv {
+  height: 150px;
+  z-index: 1;
+}
+
+.cv.standard {
+  grid-row: 6;
+  grid-column: 2;
+}
+
+.cv.fancy {
+  grid-row: 6;
+  grid-column: 3;
+}
+
+.cv_text {
+  text-decoration: none;
+  font-weight: bold;
+  grid-row: 5;
+  margin: auto;
+  padding: 3px 5px;
+  background-color: #fffae5;
+  color: #726020;
+}
+
+.cv_text:hover {
+  transform: scale(1.05);
+  color: #eecb52;
+}
+
+.cv_text.standard {
+  grid-column: 2;
+}
+
+.cv_text.fancy {
+  grid-column: 3;
 }
 
 header section.divider {
