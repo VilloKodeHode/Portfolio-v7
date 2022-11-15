@@ -195,14 +195,19 @@ header figure.img_wrap {
 /* * CV */
 /*////////////////////////////*/
 
-.img_wrap.cv {
+/* .img_wrap.cv {
   display: flex;
-}
+} */
 
 .cv {
   height: 150px;
   z-index: 1;
   box-shadow: 0px 0px 1px 0px rgb(65, 60, 1);
+}
+
+header a {
+  grid-row: 12;
+  grid-column: 2;
 }
 
 .cv.standard {
@@ -212,7 +217,9 @@ header figure.img_wrap {
 
 .cv.standard:hover {
   transform: translateY(-80px);
+  height: 200px;
   transition: 0.5s ease-in-out;
+  box-shadow: none;
 }
 
 .cv.fancy {
@@ -222,11 +229,14 @@ header figure.img_wrap {
 
 .cv.fancy:hover {
   transform: translateY(-40px);
+  height: 200px;
   transition: 0.5s ease-in-out;
+  box-shadow: none;
 }
 
 .cv_text {
   text-decoration: none;
+  z-index: 3;
   font-weight: bold;
   margin: auto;
   padding: 3px 5px;
@@ -557,3 +567,10 @@ p.description {
   /* padding: 20px; */
   border: 2px solid #eecb52;
 }
+
+/* @media only screen and (max-width: 768px) { */
+/* For mobile phones: */
+/* * {
+    grid-column: 100%;
+  }
+} */
