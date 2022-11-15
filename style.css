@@ -355,15 +355,15 @@ p.description {
   transition: opacity 0.5s, visibility 0.5s;
 }
 
-.container-1 figure.img_wrap:hover .description {
-  /* visibility: visible; */
-  /* display: block; */
-  /* background: #4b8f8c;
+/* .container-1 figure.img_wrap:hover .description {
+  visibility: visible;
+  display: block;
+  background: #4b8f8c;
   color: #c5979d;
-  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.205); */
-  /* opacity: 1; */
-  /* transform-origin: center; */
-}
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.205);
+  opacity: 1;
+  transform-origin: center;
+} */
 
 /* .container-1 .img_wrap:hover {
   position: relative;
@@ -437,9 +437,9 @@ p.description {
   /* text-align: center; */
 }
 
-.container-3 h3 {
-  /* border-bottom: 2px solid #aaae8e; */
-}
+/* .container-3 h3 {
+  border-bottom: 2px solid #aaae8e;
+} */
 
 .container-3 p {
   padding: 5em;
@@ -449,9 +449,9 @@ p.description {
   /* justify-self: center; */
 }
 
-.container-3 figure {
-  /* text-align: center; */
-}
+/* .container-3 figure {
+  text-align: center;
+} */
 
 .container-3 img {
   /* justify-self: center; */
@@ -505,9 +505,9 @@ p.description {
   /* justify-self: center; */
 }
 
-.container-4 figure {
-  /* text-align: center; */
-}
+/* .container-4 figure {
+  text-align: center;
+} */
 
 .container-4 figure.img_wrap {
   /* border: 2px solid #aaae8e; */
