@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0px;
+  user-select: none;
 }
 
 html {
@@ -76,6 +77,7 @@ h2 {
 p {
   line-height: 2;
   color: #35444f;
+  /* transition: 1s all; */
 }
 
 h3 {
@@ -136,10 +138,11 @@ nav img {
   position: absolute;
   margin: 3px;
   z-index: 4;
+  transition: all 1s;
 }
 
 nav img:hover {
-  transform: scale(1.1);
+  transform: scale(1.3) rotate(360deg);
   transform-origin: center;
 }
 
@@ -182,12 +185,14 @@ header p {
 
 header img {
   height: 35rem;
-  z-index: 2;
+  z-index: 0;
+  transform: translateY(-250px);
+  transition: all 1s ease-out;
 }
 
 header figure.img_wrap {
   display: grid;
-  grid-template-columns: 1fr 4em 6em;
+  grid-template-columns: 1fr 7em 7em;
   grid-template-rows: repeat(15, 2.4em);
 }
 
@@ -202,39 +207,45 @@ header figure.img_wrap {
 .cv {
   height: 150px;
   z-index: 1;
-  box-shadow: 0px 0px 1px 0px rgb(65, 60, 1);
-}
-
-header a {
-  grid-row: 12;
-  grid-column: 2;
+  transition: all 1s cubic-bezier(0.35, -0.37, 0.27, 1.55);
 }
 
 .cv.standard {
-  grid-row: 12;
+  grid-row: 10;
   grid-column: 2;
 }
 
-.cv.standard:hover {
-  transform: translateY(-80px);
+/* ? how to remove box so its not clickable? 
+? Have to have an anchor tag for image link... */
+a.cv.standard {
+  /* cursor: default; */
+  background-color: #1a3d19;
+}
+
+img.cv.standard:hover {
+  transform: translateY(-230px) translateX(-40px);
   height: 200px;
-  transition: 0.5s ease-in-out;
-  box-shadow: none;
 }
 
 .cv.fancy {
-  grid-row: 11;
+  /* cursor: default; */
+  grid-row: 10;
   grid-column: 3;
 }
 
-.cv.fancy:hover {
-  transform: translateY(-40px);
-  height: 200px;
-  transition: 0.5s ease-in-out;
-  box-shadow: none;
+/* ? how to remove box so its not clickable? 
+? Have to have an anchor tag for image link... */
+a.cv.fancy {
+  /* cursor: default; */
+  background-color: #2b193d;
 }
 
-.cv_text {
+img.cv.fancy:hover {
+  transform: translateY(-230px) translateX(5px);
+  height: 200px;
+}
+
+/* .cv_text {
   text-decoration: none;
   z-index: 3;
   font-weight: bold;
@@ -242,27 +253,27 @@ header a {
   padding: 3px 5px;
   background-color: #fffae5;
   color: #726020;
-}
+} */
 
-.cv_text.standard {
+/* .cv_text.standard {
   grid-row: 11;
   grid-column: 2;
-}
+} */
 
-.cv_text.standard:hover.cv.standard {
+/* .cv_text.standard:hover.cv.standard {
   transform: scale(1.5);
   transition: 0.3s ease-in-out;
-}
+} */
 
-.cv_text.fancy {
+/* .cv_text.fancy {
   grid-row: 10;
   grid-column: 3;
-}
+} */
 
-.cv_text:hover {
+/* .cv_text:hover {
   transform: scale(1.05);
   color: #eecb52;
-}
+} */
 
 /*////////////////////////////*/
 /* * Header divider */
@@ -308,6 +319,10 @@ main {
 
 main h2 {
   padding: 1em;
+}
+
+section h2:first-child {
+  font-size: 100px;
 }
 
 /*////////////////////////////////////////*/
@@ -522,7 +537,7 @@ p.description {
   padding: 5em 0em 5em 0em;
   margin-bottom: 5em;
   margin-inline: 10em;
-  border-bottom: 5px solid #eecb52;
+  /* border-bottom: 5px solid #eecb52; */
 }
 
 .container-4 h2 {
