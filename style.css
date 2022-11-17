@@ -13,6 +13,9 @@ body {
   /* background-color: #f0efef; */
   background-color: #eecc526e;
   color: #fffae5;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   /* background: linear-gradient(
     to left,
     #2b193d 0%,
@@ -42,9 +45,49 @@ body {
   min-width: 12em;
 } */
 
-.container-1 {
+/* .container-1 {
   grid-area: l;
   min-width: 12em;
+} */
+
+/*//////////////////////////////////////////////////////////////*/
+/* *Keyframes */
+/*//////////////////////////////////////////////////////////////*/
+
+@keyframes slideInFromTop {
+  0% {
+    transfrom: translateY(0px);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes cvSlideIn {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-400px);
+  }
+}
+
+@keyframes heroSlideIn {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
 }
 
 /*//////////////////////////////////////////////////////////////*/
@@ -109,8 +152,11 @@ nav {
   width: 100%;
   z-index: 99;
   background-color: #fffae5;
-  opacity: 0.9;
+  opacity: 0.8;
+  /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
   border-bottom: 2px solid #eecb52;
+  animation: 2s ease-in-out 0s 1 fadeInAnimation backwards;
 }
 
 nav a {
@@ -124,6 +170,10 @@ nav a {
   padding: 0.5em 0 1.2em 1em;
   height: 0;
   font-size: 18px;
+  /* transition: 1s linear; */
+}
+
+nav a:hover {
 }
 
 nav a:active {
@@ -183,11 +233,12 @@ header p {
   max-width: 15em;
 }
 
-header img {
+header img.hero {
   height: 35rem;
   z-index: 0;
-  transform: translateY(-250px);
-  transition: all 1s ease-out;
+  transform: translateY(200px);
+  animation: 1s cubic-bezier(0.35, -0.37, 0.27, 1.55) 0s 1
+    heroSlideIn forwards;
 }
 
 header figure.img_wrap {
@@ -200,48 +251,57 @@ header figure.img_wrap {
 /* * CV */
 /*////////////////////////////*/
 
-/* .img_wrap.cv {
-  display: flex;
-} */
-
 .cv {
   height: 150px;
   z-index: 1;
-  transition: all 1s cubic-bezier(0.35, -0.37, 0.27, 1.55);
 }
 
 .cv.standard {
-  grid-row: 10;
+  transition: all 1s cubic-bezier(0.35, -0.37, 0.27, 1.55);
+  grid-row: 15;
   grid-column: 2;
+  /* transform: translateY(-500px); */
+}
+
+a.cv {
+  animation: 1s cubic-bezier(0.35, -0.37, 0.27, 1.55) 0.5s 1
+    cvSlideIn forwards;
 }
 
 /* ? how to remove box so its not clickable? 
 ? Have to have an anchor tag for image link... */
 a.cv.standard {
+  /* animation: none; */
   /* cursor: default; */
-  background-color: #1a3d19;
+  /* transform: translateY(100px); */
+  /* background-color: #1a3d19; */
 }
 
 img.cv.standard:hover {
-  transform: translateY(-230px) translateX(-40px);
+  transform: translateX(-40px);
   height: 200px;
 }
 
 .cv.fancy {
-  /* cursor: default; */
-  grid-row: 10;
+  transition: all 1s cubic-bezier(0.35, -0.37, 0.27, 1.55);
+  grid-row: 15;
   grid-column: 3;
+  /* transform: translateY(-500px); */
 }
 
 /* ? how to remove box so its not clickable? 
 ? Have to have an anchor tag for image link... */
 a.cv.fancy {
+  /* animation: none; */
   /* cursor: default; */
-  background-color: #2b193d;
+  /* transform: translateY(0px); */
+  /* background-color: #2b193d; */
+  /* transform: translateY(100px); */
 }
 
 img.cv.fancy:hover {
-  transform: translateY(-230px) translateX(5px);
+  transform: translateX(5px);
+  /* animation: translateX(50px); */
   height: 200px;
 }
 
@@ -330,6 +390,8 @@ section h2:first-child {
 /*////////////////////////////////////////*/
 
 .container-1 {
+  grid-area: l;
+  /* min-width: 20em; */
   display: flex;
   flex-direction: column;
   justify-content: center;
