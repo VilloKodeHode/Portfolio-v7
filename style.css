@@ -27,28 +27,7 @@ body {
 
   font-family: "League Spartan", sans-serif;
   min-height: 100vh;
-
-  /* display: grid;
-  grid:
-    "c1 h s1"
-    "c2 m s2"
-    "c3 m s3"
-    "c4 m s4"
-    "c5 f s5";
-  grid-template-columns: 5em 1fr 5em; */
-
-  /* grid-template-rows: 45px 1fr 1fr 1fr; */ /*! Sjekk denne tilbake om grids blir føkka! */
 }
-
-/* aside {
-  grid-area: c;
-  min-width: 12em;
-} */
-
-/* .container-1 {
-  grid-area: l;
-  min-width: 12em;
-} */
 
 /*//////////////////////////////////////////////////////////////*/
 /* *Keyframes */
@@ -87,6 +66,15 @@ body {
   }
   100% {
     transform: translateY(-200px);
+  }
+}
+
+@keyframes heroText {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
 
@@ -210,7 +198,7 @@ header {
     #fafafab9 100%
   ); */
   color: #2b193d;
-  grid-area: h;
+  /* grid-area: h; */
   display: flex;
   opacity: 0.9;
   justify-content: center;
@@ -224,6 +212,8 @@ header article {
   /* background-color: #4b8f8c4b; */
   height: fit-content;
   padding: 1em 0em 1em 1em;
+  animation: 1s cubic-bezier(0.35, -0.37, 0.27, 1.55) 0s 1 heroText
+    forwards;
   /* border: 2em #4b8f8c4b solid; */
   /* transition: 0.5s ease-in-out; */
 }
@@ -343,7 +333,8 @@ header section.divider {
   opacity: initial;
   padding: 100px;
   display: flex;
-  width: 95em;
+  max-width: 100em;
+  width: auto;
   position: absolute;
   z-index: 1;
   top: 649px;
@@ -359,6 +350,8 @@ header section.divider {
 
 .divider p {
   max-width: 100em;
+  min-width: 1em;
+  /* width: 50em; */
   line-height: 1.5;
   padding: 1em;
   font-size: 1.2em;
