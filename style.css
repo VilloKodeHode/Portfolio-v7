@@ -99,7 +99,7 @@ body {
 /*//////////////////////////////////////////////////////////////*/
 
 h1 {
-  font-size: 3em;
+  font-size: 7vh;
   line-height: 1.1;
   letter-spacing: 5px;
   color: #030104;
@@ -109,7 +109,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 6vh;
   color: #030104;
   /* text-shadow: 0px 0px 3px gold; */
 }
@@ -123,12 +123,14 @@ h2 {
 
 p {
   line-height: 2;
+  font-size: 2.5vh;
   color: #35444f;
   /* transition: 1s all; */
 }
 
 h3 {
   color: #35444f;
+  font-size: 4vh;
   padding-bottom: 1em;
 }
 
@@ -365,7 +367,8 @@ header section.divider {
 
 .divider p {
   max-width: 100em;
-  min-width: 1em;
+  min-width: 15em;
+  max-height: 20em;
   /* width: 50em; */
   line-height: 1.5;
   padding: 1em;
@@ -389,8 +392,12 @@ main h2 {
   padding: 1em;
 }
 
+/*////////////////////////////////////////*/
+/* * Sections of main */
+/*////////////////////////////////////////*/
+
 section h2:first-child {
-  font-size: 100px;
+  font-size: 12vh;
 }
 
 /*////////////////////////////////////////*/
@@ -657,5 +664,28 @@ p.description {
 /* For mobile phones: */
 /* * {
     grid-column: 100%;
+  }
+} */
+
+@media only screen and (max-width: 1200px) {
+  * {
+  }
+}
+/* body p {
+    font-size: 5px;
+  } */
+
+/* h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+} */
+/* main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 } */
